@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+        integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="big_box">
+            <div class="text_box">
+                <div class="got_elements_box">
+                    <p class="got_elements">0</p>
+                    <ul class="lost_balls">
+                        <li><img src="images/ball.png" alt="ball"></li>
+                        <li><img src="images/ball.png" alt="ball"></li>
+                        <li><img src="images/ball.png" alt="ball"></li>
+                        <li><img src="images/ball.png" alt="ball"></li>
+                        <li><img src="images/ball.png" alt="ball"></li>
+                    </ul>
+                </div>
+                <div>
+                    <button id="play" type="submit">Play</button>
+                    <button id="pause" type="submit">Pause</button>
+                </div>
+            </div>
+            <div class="squere">
+                <div class="basket_block">
+                    <img src="images/basket-white.png" alt="basket" class="basket">
+                </div>
+
+            </div>
+            <div id="popup" class="popup">
+                <div class="popup-content">
+                    <span class="close">&times;</span>
+                    <img src="images/game-over.png" alt="game-over">
+                </div>
+            </div>
+            <div class="canvas_block" id="canvas_block">
+                <section class="player-wrap">
+
+                </section>
+                
+            </div>
+            <div>
+                <div class="popup_gameOver">
+                    <div class="popup-content">
+                        <span class="close">&times;</span>
+                        <img src="images/you-win.png" alt="winner">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script src="./js/canvas.js"></script>
+    <script src="./js/custom.js"></script>
+</body>
+
+</html>

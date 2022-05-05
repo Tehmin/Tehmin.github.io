@@ -1,0 +1,244 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+ height: 100%;
+}
+.wrapper {
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("images/bg.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.squere {
+  height: 450px;
+  width: 700px;
+  border: 3px solid rgb(255, 255, 255);
+  position: relative;
+  -webkit-box-shadow: 0px 0px 15px 5px #ffffff; 
+  box-shadow: 0px 0px 6px 2px #ffffff;
+  border-radius: 20px;
+  cursor: none;
+  background-color: rgb(237 177 97 / 58%);
+}
+.ball {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+}
+.ball img {
+  height: 50px;
+  width: 50px;
+}
+.big_box, .lost_elements {
+  display: flex;
+}
+.big_box {
+  flex-direction: column;
+  align-items: center;
+}
+.deleted_lost_box, .text_box  {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+.text_box {
+  border: solid 3px rgb(255, 255, 255);
+  border-bottom: none;
+  width: 460px;
+  height: 160px;
+  font-size: 20px;
+  background-color: rgb(245 189 107);
+  border-radius: 100px 100px 0px 66px / 100px 100px 0px 0px;
+}
+.count_elements, .deleted_elements {
+  margin: 5px 10px;
+}
+.basket_block {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 55px;
+}
+.basket{
+  height: 55px;
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+}
+.basket_block .ui-wrapper {
+  width: 100% !important;
+}
+#play, #pause {
+  padding: 8px 0;
+  width: 90px;
+  background: #d78f3e;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 0px 0px 6px 2px #d78f3e;
+  font-size: 17px;
+  border: 1px solid #bf7229;
+  margin: 0 7px;
+  font-weight: 600;
+}
+.got_elements_box {
+  margin: 5px 0 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.got_elements_box ul{
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  margin: 5px 0;
+}
+.got_elements_box ul li {
+  margin: 5px;
+  position: relative;
+  background: #000;
+  border: 2px solid #71470b;
+  border-radius: 50px;
+  padding: 13px;
+  height: 30px;
+}
+.got_elements_box img {
+  width: 27px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.got_elements {
+  background: url("images/score-board.png") center center;
+  background-size: cover;
+  width: 169px;
+  height: 84px;
+  color: #fff;
+  text-align: center;
+  padding: 22px 0;
+  font-size: 35px;
+}
+
+/*---------popup-----------*/
+.popup, .popup_gameOver {
+  display: none; 
+  position: fixed; 
+  z-index: 100000; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+  text-align: center;
+}
+.popup-content {
+  background: url("images/basketball-ball.jpg") center center;
+  background-size: cover;
+  margin: auto;
+  padding: 20px;
+  box-shadow: 0px 0px 6px 2px #ffffff;
+  border-radius: 20px;
+  width: 40%;
+  height: 235px;
+  font-size: 35px;
+}
+.popup-content p {
+  padding: 50px 0;
+  font-weight: 600;
+}
+.popup-content img {
+  height: 170px;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.close {
+  color: #ffffff;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*----------- canvas -----------*/
+.canvas_block {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  display: none;
+}
+#particle-canvas {
+  display: none;
+  position: fixed;
+  pointer-events: none; 
+  left: 0; 
+  top: 0; 
+  width: 100%; 
+  height: 100%;
+  z-index: 10;
+  }
+@media only screen and (max-width: 710px) and (min-width: 500px){
+	.squere {
+		width: 485px;	
+	}
+}
+@media only screen and (max-width: 500px){
+	.got_elements {
+		width: 146px;	
+	}
+	.text_box {
+		width: 425px;
+	}
+	.squere {
+		width: 450px;	
+	}
+	.popup-content img {
+		height: 26%;
+		top: 38%;
+	}
+}
+@media only screen and (max-width: 460px){
+	.squere {
+		width: 355px;	
+	}
+	.text_box {
+		width: 340px;
+	}
+	.got_elements_box {
+		margin: 18px 0 15px 0;
+	}
+	.got_elements {
+		width: 130px;
+		height: 77px;	
+		padding: 22px 0;
+	}
+	.got_elements_box ul li{
+		margin: 5px;
+		padding: 9px;
+		height: 22px;
+	}
+	.got_elements_box img {
+		width: 20px;
+	}
+	
+}
